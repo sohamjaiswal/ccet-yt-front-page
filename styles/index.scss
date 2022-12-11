@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+@import 'header.scss';
 @import 'sidebar.scss';
 
 :root {
@@ -41,119 +42,6 @@ hr {
 
 .main-container {
     width: 100%;
-    .page-header {
-        margin: 0.5rem 2rem;
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        .left {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-            .logo {
-                display: flex;
-                align-items: center;
-                gap: 0.5rem;
-                img {
-                    height: 3rem;
-                }
-                white-space: nowrap;
-            }
-            cursor: pointer;
-        }
-        .center {
-            display: flex;
-            gap: 1rem;
-            width: 50%;
-            align-items: center;
-            .search-box {
-                border-radius: 10000rem;
-                border: solid var(--border);
-                height: 3rem;
-                width: 90%;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                overflow: hidden;
-                .search-text {
-                    border: none;
-                    margin-left: 2rem;
-                    padding: 2rem 0; 
-                    width: calc(100% - 2rem);
-                    background: rgba(0,0,0,0);
-                    color: var(--text-color);
-                    &:focus {
-                        outline: none;
-                    }
-                }
-                .search-button {
-                    padding: 0 2rem;
-                    background-color: var(--secondary);
-                    height: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    border-left: solid var(--border);
-                }
-            }
-            .mic-search {
-                height: 3rem;
-                width: 3rem;
-                border-radius: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: var(--secondary);
-            }
-        }
-        .right {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-            .theme-switch {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                position: relative;
-                height: 3rem;
-                width: 3rem;
-                input {
-                    display: none;
-                }
-                .theme-button {
-                    position: absolute;
-                    height: 3rem;
-                    width: 3rem;
-                    border-radius: 100%;
-                    background-color: var(--secondary);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    cursor: pointer;
-                    .dark {
-                        display: none;
-                    }
-                }
-                input:checked ~ .theme-button {
-                    .light {
-                        display: none;
-                    }
-                    .dark {
-                        display: block;
-                    }
-                }
-            }
-            .avatar {
-                height: 3rem;
-                width: 3rem;
-                border-radius: 100%;
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                cursor: pointer;
-            }
-        }
-    }
     .page-container {
         display: flex;
         gap: 1rem;

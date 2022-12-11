@@ -9,30 +9,6 @@
         position: relative;
         overflow-y: scroll;
         overflow-x: hidden;
-        footer {
-            margin-top: auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 0.25rem;
-            p {
-                text-align: center;
-                margin: 0;
-            }
-        }
-    }
-}
-
-[sidebar="active"] {
-    .sidebar {
-        margin: 0rem 1.35rem;
-        height: calc(100vh - 6rem);
-        width: 17.5rem;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        position: relative;
-        overflow-y: scroll;
         .main-ops {
             width: 100%;
             border-radius: 0.5rem;
@@ -53,10 +29,26 @@
     }
 }
 
+[sidebar="active"] {
+    .sidebar {
+        footer {
+            margin-top: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.25rem;
+            p {
+                text-align: center;
+                margin: 0;
+            }
+        }
+    }
+}
+
 [sidebar="inactive"] {
     .sidebar {
         &>*{
-            display: none !important;
+            display: none;
         }
         width: 3rem;
         .main-ops {
