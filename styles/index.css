@@ -150,11 +150,28 @@ body {
   height: calc(100vh - 6rem);
   width: 11.8rem;
   display: flex;
-  background-color: var(--border);
+  flex-direction: column;
   gap: 1rem;
   position: relative;
   overflow-y: scroll;
   padding: 1rem;
+}
+.main-container .page-container .sidebar .main-ops {
+  width: 100%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.main-container .page-container .sidebar .main-ops input {
+  display: none;
+}
+.main-container .page-container .sidebar .main-ops .tab {
+  padding: 0.75rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.main-container .page-container .sidebar .main-ops input:checked ~ .tab {
+  background-color: var(--border);
 }
 .main-container .page-container .sidebar footer {
   align-self: flex-end;
