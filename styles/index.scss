@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+@import 'sidebar.scss';
+
 :root {
     --text-color: black;
     --body-bg: white;
@@ -7,14 +9,14 @@
     --border: #cdcdcd;
 }
 
-[data-theme="light"] {
-    --text-color: black;
+[theme="light"] {
+    --text-color: rgb(28, 28, 28);
     --body-bg: white;
     --secondary: #f3f3f3;
     --border: #cdcdcd;
 }
 
-[data-theme="dark"] {
+[theme="dark"] {
     --text-color: white;
     --body-bg: black;
     --secondary: #2a2a2a;
@@ -25,6 +27,16 @@ body {
     font-family: roboto;
     background-color: var(--body-bg);
     color: var(--text-color);
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+hr {
+    width: 100%;
+    border: 0.0625rem solid var(--border);
 }
 
 .main-container {
@@ -45,8 +57,6 @@ body {
                 img {
                     height: 3rem;
                 }
-                font-weight: 700;
-                font-size: 1.25rem;
                 white-space: nowrap;
             }
             cursor: pointer;
@@ -55,6 +65,7 @@ body {
             display: flex;
             gap: 1rem;
             width: 50%;
+            align-items: center;
             .search-box {
                 border-radius: 10000rem;
                 border: solid var(--border);
@@ -146,45 +157,5 @@ body {
     .page-container {
         display: flex;
         gap: 1rem;
-        .sidebar {
-            margin: 0rem 2rem;
-            height: calc(100vh - 6rem);
-            width: 11.8rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            position: relative;
-            overflow-y: scroll;
-            padding: 1rem;
-            .main-ops {
-                width: 100%;
-                border-radius: 0.5rem;
-                overflow: hidden;
-                input {
-                    display: none;
-                }
-                .tab {
-                    padding: 0.75rem;
-                    display: flex;
-                    gap: 1rem;
-                    align-items: center;
-                }
-                input:checked ~ .tab {
-                    background-color: var(--border);
-                }
-            }
-            footer {
-                align-self: flex-end;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                gap: 0.25rem;
-                p {
-                    text-align: center;
-                    margin: 0;
-                }
-            }
-
-        }
     }
 }

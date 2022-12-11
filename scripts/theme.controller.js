@@ -2,8 +2,7 @@ const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme
 const themeSwitch = document.getElementById('theme-switch')
 
 if (currentTheme) {
-    document.documentElement.setAttribute('data-theme', currentTheme);
-
+    document.documentElement.setAttribute('theme', currentTheme);
     if (currentTheme === 'dark') {
         themeSwitch.checked = true;
     }
@@ -11,13 +10,13 @@ if (currentTheme) {
 
 function switchTheme(e) {
     if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.setAttribute('theme', 'dark');
         localStorage.setItem('theme', 'dark');
+        return
     }
-    else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-    }  
+    document.documentElement.setAttribute('theme', 'light');
+    localStorage.setItem('theme', 'light');
+    return
 }
 
 themeSwitch.addEventListener('change', switchTheme, false);

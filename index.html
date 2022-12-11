@@ -14,10 +14,12 @@
     <div class="main-container">
         <header class = "page-header">
             <div class="left">
-                <i class="fa-solid fa-bars fa-2x"></i>
+                <i class="fa-solid fa-bars fa-2x" id="sidebar-toggle"></i>
                 <div class="logo">
                     <img src="assets/logo.webp" alt="Very nice logo" class="logo" />
-                    YouTube Clone
+                    <h2>
+                        YouTube Clone
+                    </h2>
                 </div>
             </div>
             <div class="center">
@@ -55,25 +57,31 @@
                     <input type="radio" id="main-ops" name="main-ops" checked="true"/>
                     <div class="tab">
                         <i class="fa-solid fa-house"></i>
-                        Home
+                        <div class="text">
+                            Home
+                        </div>
                     </div>
                 </label>
                 <label class = main-ops>
                     <input type="radio" id="main-ops" name="main-ops" />
                     <div class="tab">
                         <i class="fa-solid fa-ticket"></i>
-                        Subscriptions
+                        <div class="text">
+                            Subscriptions
+                        </div>
                     </div>
                 </label>
+                <hr />
                 <footer>
                     <p>Made with ❤️ by Soham</p>
-                    <p>© Kodski (jk) <br /> 
+                    <p>© Kodski <br /> 
                         Everything is inspired by <br />
                         <a href="https://youtube.com/" target="_blank">YouTube</a></p>
                 </footer>
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="scripts/theme-controller.js"></script>
+    <script type="text/javascript" src="scripts/theme.controller.js"></script>
+    <script type="text/javascript" src="scripts/sidebar.controller.js"></script>
 </body>
 </html>
