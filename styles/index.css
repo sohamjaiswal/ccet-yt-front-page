@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 :root {
   --text-color: black;
+  --text-color-secondary: rgb(105, 105, 105);
   --body-bg: white;
   --secondary: #f3f3f3;
   --border: #cdcdcd;
@@ -45,6 +46,7 @@
 
 [theme=light] {
   --text-color: rgb(28, 28, 28);
+  --text-color-secondary: rgb(105, 105, 105);
   --body-bg: white;
   --secondary: #f3f3f3;
   --border: #cdcdcd;
@@ -52,6 +54,7 @@
 
 [theme=dark] {
   --text-color: white;
+  --text-color-secondary: rgb(157, 157, 157);
   --body-bg: black;
   --secondary: #2a2a2a;
   --border: #515151;
@@ -240,11 +243,15 @@ hr {
   display: flex;
   flex-wrap: wrap;
   padding: 0 1rem;
+  gap: 3.75%;
+  row-gap: 2.5rem;
 }
 .main-container .page-container .main-panel .vid-panel .video {
+  cursor: pointer;
   flex: 0 0 21%;
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
 }
 .main-container .page-container .main-panel .vid-panel .video .thumbnail {
   width: 100%;
@@ -263,4 +270,32 @@ hr {
   background-color: var(--body-bg);
   padding: 0.25rem 0.5rem;
   font-size: 0.75rem;
+}
+.main-container .page-container .main-panel .vid-panel .video .details {
+  display: flex;
+  width: 100%;
+}
+.main-container .page-container .main-panel .vid-panel .video .details .avatar {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 20%;
+  aspect-ratio: 1/1;
+}
+.main-container .page-container .main-panel .vid-panel .video .details .text-details {
+  padding-left: 1rem;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main-container .page-container .main-panel .vid-panel .video .details .text-details .title {
+  margin: 0;
+}
+.main-container .page-container .main-panel .vid-panel .video .details .text-details .support {
+  margin-top: auto;
+}
+.main-container .page-container .main-panel .vid-panel .video .details .text-details .support .minor-detail {
+  font-size: 0.75rem;
+  color: var(--text-color-secondary);
 }/*# sourceMappingURL=index.css.map */
