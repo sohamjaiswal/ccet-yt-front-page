@@ -7,6 +7,13 @@
     --border: #cdcdcd;
 }
 
+[data-theme="light"] {
+    --text-color: black;
+    --body-bg: white;
+    --secondary: #f3f3f3;
+    --border: #cdcdcd;
+}
+
 [data-theme="dark"] {
     --text-color: white;
     --body-bg: black;
@@ -63,6 +70,8 @@ body {
                 margin-left: 2rem;
                 padding: 2rem 0; 
                 width: calc(100% - 2rem);
+                background: rgba(0,0,0,0);
+                color: var(--text-color);
                 &:focus {
                     outline: none;
                 }
