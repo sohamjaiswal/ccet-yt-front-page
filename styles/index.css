@@ -33,6 +33,15 @@
 :root .sidebar .main-ops input:checked ~ .tab {
   background-color: var(--border);
 }
+:root .avatar {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
 
 [theme=light] {
   --text-color: rgb(28, 28, 28);
@@ -197,15 +206,6 @@ hr {
 .main-container .page-header .right .theme-switch input:checked ~ .theme-button .dark {
   display: block;
 }
-.main-container .page-header .right .avatar {
-  height: 3rem;
-  width: 3rem;
-  border-radius: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
 .main-container .page-container {
   display: flex;
   gap: 1rem;
@@ -216,6 +216,7 @@ hr {
   width: 100%;
   height: calc(100vh - 6rem);
   overflow-y: scroll;
+  gap: 1rem;
 }
 .main-container .page-container .main-panel .tag-container {
   padding: 0rem 1rem;
@@ -233,4 +234,33 @@ hr {
 .main-container .page-container .main-panel .tag-container .tag input:checked ~ .tag-text {
   background-color: var(--text-color);
   color: var(--body-bg);
+}
+.main-container .page-container .main-panel .vid-panel {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+.main-container .page-container .main-panel .vid-panel .video {
+  flex: 0 0 21%;
+  display: flex;
+  flex-direction: column;
+}
+.main-container .page-container .main-panel .vid-panel .video .thumbnail {
+  width: 100%;
+  aspect-ratio: 16/9;
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+.main-container .page-container .main-panel .vid-panel .video .thumbnail .time {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--body-bg);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
 }/*# sourceMappingURL=index.css.map */

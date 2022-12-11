@@ -34,6 +34,16 @@
             }
         }
     }
+
+    .avatar {
+        height: 3rem;
+        width: 3rem;
+        border-radius: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+    }
 }
 
 [theme="light"] {
@@ -204,15 +214,6 @@ hr {
                     }
                 }
             }
-            .avatar {
-                height: 3rem;
-                width: 3rem;
-                border-radius: 100%;
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                cursor: pointer;
-            }
         }
     }
     .page-container {
@@ -224,6 +225,7 @@ hr {
             width: 100%;
             height: calc(100vh - 6rem);
             overflow-y: scroll;
+            gap: 1rem;
             .tag-container {
                 padding: 0rem 1rem;
                 display: flex;
@@ -240,6 +242,35 @@ hr {
                     input:checked ~ .tag-text {
                         background-color: var(--text-color);
                         color: var(--body-bg);
+                    }
+                }
+            }
+            .vid-panel {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                padding: 0 1rem;
+                .video {
+                    flex: 0 0 21%;
+                    display: flex;
+                    flex-direction: column;
+                    .thumbnail {
+                        width: 100%;
+                        aspect-ratio: 16/9;
+                        position: relative;
+                        background-position: center center;
+                        background-size: cover;
+                        overflow: hidden;
+                        border-radius: 0.5rem;
+                        .time {
+                            position: absolute;
+                            right: 0.5rem;
+                            bottom: 0.5rem;
+                            border-radius: 0.5rem;
+                            background-color: var(--body-bg);
+                            padding: 0.25rem 0.5rem;
+                            font-size: 0.75rem;
+                        }
                     }
                 }
             }
