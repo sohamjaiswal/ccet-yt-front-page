@@ -20,10 +20,12 @@ The project isn't actually usable as it's just a mockup of the site made as per 
 The styling of almost everything on this page has been kept very modular and is easily mutable. It shouldn't be much of a problem to be able to refactor this into valid react or svelte code.
 
 # Naming Conventions 
-| Type   | Nomenclature | 
-|-----------------------|
-| Folder | kebab-case |
-| Files | kebab-case |
-| scripts | kebab-case.scope.js |
-| js variables | camelCase |
-| html class/id names | kebab-case |
+| Type                   | Nomenclature         |
+|------------------------|----------------------|
+| Folders                | kebab-case           |
+| Files                  | kebab-case           |
+| Scripts                | kebab-case.scope.js  |
+| JS Variables/Functions | camelCase            |
+| JS Objects             | PascalCase           |
+| JS Constants           | SCREAMING_SNAKE_CASE |
+| HTML ClassNames/IDs    | kebab-case           |

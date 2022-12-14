@@ -1,6 +1,6 @@
-const persistentSidebarPref = localStorage.getItem('sidebar') ? localStorage.getItem('sidebar') : null;
+const PERSISTENT_SIDEBAR_PREF = localStorage.getItem('sidebar') ? localStorage.getItem('sidebar') : null;
 
-const sidebarToggle = document.getElementById('sidebar-toggle')
+const SIDEBAR_TOGGLE = document.getElementById('sidebar-toggle')
 
 let currentSidebarPref = true
 
@@ -15,8 +15,8 @@ const updateTheme = () => {
 }
 
 const init = () => {
-    if (persistentSidebarPref) {
-        currentSidebarPref = persistentSidebarPref === "active" ? true : false
+    if (PERSISTENT_SIDEBAR_PREF) {
+        currentSidebarPref = PERSISTENT_SIDEBAR_PREF === "active" ? true : false
         updateTheme()
         return
     }
@@ -31,4 +31,4 @@ const sidebarToggleClickHandler = () => {
 
 init()
 
-sidebarToggle.addEventListener('click', sidebarToggleClickHandler)
+SIDEBAR_TOGGLE.addEventListener('click', sidebarToggleClickHandler)

@@ -1,10 +1,10 @@
-const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-const themeSwitch = document.getElementById('theme-switch')
+const CURRENT_THEME = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+const THEME_SWITCH = document.getElementById('theme-switch')
 
-if (currentTheme) {
-    document.documentElement.setAttribute('theme', currentTheme);
-    if (currentTheme === 'dark') {
-        themeSwitch.checked = true;
+if (CURRENT_THEME) {
+    document.documentElement.setAttribute('theme', CURRENT_THEME);
+    if (CURRENT_THEME === 'dark') {
+        THEME_SWITCH.checked = true;
     }
 }
 
@@ -19,4 +19,4 @@ function switchTheme(e) {
     return
 }
 
-themeSwitch.addEventListener('change', switchTheme, false);
+THEME_SWITCH.addEventListener('change', switchTheme, false);
